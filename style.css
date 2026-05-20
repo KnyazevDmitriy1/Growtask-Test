@@ -1,0 +1,687 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'vladivostok', sans-serif;
+}
+
+h1 {
+    font-size: 76px;
+    line-height: 110%;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 48px;
+    line-height: 100%;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 28px;
+    line-height: 100%;
+    font-weight: bold;
+}
+
+h4 {
+    line-height: 100%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.t1 {
+    line-height: 150%;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.t2 {
+    line-height: 150%;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.t3 {
+    line-height: 150%;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.t4 {
+    line-height: 150%;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.container {
+    max-width: 1420px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* хедер */
+.header_back {
+    position: sticky;
+    top: 0;  
+    background: #FFFFFF;
+    z-index: 2;
+}
+
+.header {  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid #F2F2F2 2px;
+    width: 1920px;
+    height: 90px;
+    position: relative;
+}
+
+.header_menu button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background: #404040;
+    border: 0px;
+    border-radius: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.header_menu button:hover {
+    background: #999999;
+    cursor: pointer;
+}
+
+.header_menu button:active {
+    background: #2B2B2B;
+}
+
+.header_menu img {
+    filter: invert(100%);
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    background: #0D0D0D;
+    width: 1920px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+.footer p {
+    color: #F2F2F2;
+}
+
+/* первый экран */
+.firstscreen {
+    width: 1920px;
+    height: 700px;
+    margin: 0 auto;
+}
+
+.cta {
+    width: 700px;
+    height: 496px;
+    margin-bottom: 124px;
+}
+
+.cta h1 {
+    margin-top: 80px;
+    margin-bottom: 24px;
+}
+
+.cta p[class="t2"] {
+    margin-bottom: 40px;
+    color:#404040;
+}
+
+/* кнопки прокрутки страницы */
+.cta_buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 551px;
+    height: 128px;
+    border: solid #CBC2F2;
+    background: #F9F7FF;
+    opacity: 1;
+    border-radius: 40px;
+    gap: 20px;
+    border-width: 2px;
+    margin-right: 169px;
+}
+
+.cta_buttons p {
+    font-weight: bold;
+}
+
+.button1 {
+    width: 169px;
+    height: 48px;
+    border: 0px;
+    border-radius: 12px;
+    background: #F23051;
+    color: #FFFFFF;
+}
+
+.button1:hover {
+    background: #FC8B9E;
+    cursor: pointer;
+}
+
+.button1:active {
+    background: #CC1433;
+}
+
+.button2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 282px;
+    height: 48px;
+    border: 0px;
+    border-radius: 12px;
+    background: #404040;
+    color: #FFFFFF;
+}
+
+.button2 img {
+    filter: invert(100%);
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+    margin-right: 16px;
+}
+
+.button2 p {
+    margin-left: 20px;
+}
+
+.button2:hover {
+    background: #999999;
+    cursor: pointer;
+}
+
+.button2:active {
+    background: #2B2B2B;
+}
+
+/* тумблер */
+.cta_toggle {
+    display: flex;
+    align-items: center;
+    width: 680px;
+    height: 48px;
+    margin-top: 40px;
+}
+
+.toggle {
+    display: inline-block;
+    background: #CCCCCC;
+    width: 44px;
+    height: 24px;
+    border-radius: 120px;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 8px;  
+}
+
+.toggle:hover {
+    background: #999999;
+}
+
+.toggle::before {
+    position: absolute;
+    content: "";
+    background: #FFFFFF;
+    width: 16px;
+    height: 16px;
+    border-radius: 120px;
+    margin: 4px;
+    transition: 0.3s;
+}
+
+input:checked + .toggle {
+    background: #F23051;
+}
+
+input:checked + .toggle::before {
+    transform: translateX(20px);
+}
+
+.toggle_check {
+    display: none;
+}
+
+.toggle-label {
+    color: #999999;
+}
+
+/* градиентный блок и блоки с картинками */
+.image-container {
+    width: 700px;
+    height: 540px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+/* градиентный блок */
+.block {
+    width: 340px;
+    height: 340px;
+    border-radius: 40px;
+    background: linear-gradient(to right,#897ACC, #CC29A3, #F23051);
+}
+
+/* блоки с картинками */
+.image_block1 img {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 340px;
+    height: 340px;
+    border-radius: 40px;
+}
+
+.image_block2 img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 340px;
+    height: 340px;
+    border-radius: 40px;
+}
+
+/* слайдер */
+.slider_container {
+    max-width: 1420px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1920px;
+    height: 586px;
+    background-color: #F9F7FF;
+    margin: 0 auto;
+}
+
+.title_slider {
+    width: 1420px;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.title_slider button {
+    width: 48px;
+    height: 48px;
+    border: 0px;
+    background: #FFFFFF;
+    gap: 8px;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.title_slider button:hover {
+    background: #FCD7DD;
+    cursor: pointer;
+}
+
+.title_slider button:active {
+    background: #FC8B9E;
+}
+
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 80px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 340px;
+    height: 280px;
+    gap: 20px;
+    border-radius: 40px;
+    border-width: 2px;
+    padding: 40px;
+    border: solid #CBC2F2;
+    margin-right: 20px;
+    background: #FFFFFF;
+}
+
+.card h2 {
+    background: linear-gradient(to right,#897ACC, #CC29A3, #F23051);
+    color:transparent;
+    background-clip: text;
+}
+
+.card p {
+    font-weight: 400px;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #665C99;
+}
+
+.card_border {
+    border: solid #F2F2F2 1px;
+}
+
+/* аккордеон */
+.title {
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.column {
+    margin-bottom: 80px;
+}
+
+.column h2 h4 {
+    color: #2B2B2B;
+}
+
+.accordion {
+    margin-bottom: 20px;
+}
+
+.accordion_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 700px;
+    height: 64px;
+    gap: 20px;
+    border-radius: 10px;
+    border: solid #F2F2F2 2px;
+    padding: 20px;
+    background: #F2F2F2;
+    margin-right: 20px;
+
+}
+
+.accordion_text {
+    display: none;
+    width: 700px;
+    background: #F2F2F2;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: solid #F2F2F2 2px;
+}
+
+.accordion_text p {
+    color: #404040;
+}
+
+.accordion_text.active {
+    display: block;
+}
+
+/* аккордеон псевдоклассы */
+.accordion_header:hover {
+    border: solid #CCCCCC 2px;
+    cursor: pointer;
+}
+
+.accordion_header:active {
+    background: #CCCCCC;
+}
+
+.accordion:has(.accordion_text.active) .accordion_header {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: solid #F2F2F2 2px;
+}
+
+.accordion_text.active:hover {
+    border: solid #CCCCCC 2px;
+    border-top: solid #F2F2F2 2px;
+    cursor: pointer;
+}
+
+.accordion:has(.accordion_text.active:hover) .accordion_header {
+    border: solid #CCCCCC 2px;
+    border-bottom: solid #F2F2F2 2px;
+}
+
+
+.accordion:has(.accordion_header:hover) .accordion_text.active {
+    border: solid #CCCCCC 2px;
+    border-top: solid #F2F2F2 2px;
+}
+
+.accordion_text.active:active {
+    background: #CCCCCC;
+}
+
+.accordion:has(.accordion_text.active:active) .accordion_header {
+    background: #CCCCCC;
+    border-bottom: solid #CCCCCC 2px;;
+}
+
+
+.accordion:has(.accordion_header:active) .accordion_text.active {
+    background: #CCCCCC;
+    border-top: solid #CCCCCC 2px;;
+}
+
+
+/* Форма */
+.form {
+    background: #F9F7FF;
+    min-width: 1420px;
+}
+
+.title_form {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    min-width: 700px;
+    height: 364px;
+    gap: 24px;
+    border-radius: 40px;
+    padding: 40px;
+    border: solid #CBC2F2 2px;
+    margin-right: 20px;
+    background: #FFFFFF;
+}
+
+.title_form h2 {
+    color: #554D80;
+}
+
+.title_form p {
+    color: #404040;
+}
+
+.socials-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.socials {
+    display: flex;
+    gap: 12px;
+}
+
+.socials a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background: #F2F2F2;
+    border-radius: 12px;
+}
+
+.socials-block p {
+    font-weight: bold;
+}
+
+/* форма */
+.form-body {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    width: 700px;
+    height: 426px;
+    gap: 20px;
+    border-radius: 40px;
+    padding: 40px;
+    border: solid #CBC2F2 2px;
+    background: #FFFFFF;
+}
+
+.input label {
+    color: #999999;
+}
+
+.input input {
+    margin-bottom: 12px;
+    width: 620px;
+    height: 48px;
+    gap: 4px;
+    border-radius: 12px;
+    border: solid #F2F2F2 2px;
+    padding-top: 6.5px;
+    padding-right: 12px;
+    padding-bottom: 6.5px;
+    padding-left: 12px;
+    background: #F2F2F2;
+}
+
+.input input:hover {
+    border: solid #CCCCCC 2px;
+    cursor: pointer;
+}
+
+.form-body button {
+    width: 195px;
+    height: 48px;
+    gap: 8px;
+    border-radius: 12px;
+    border: 0px;
+    padding-top: 12px;
+    padding-right: 20px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    background: #F23051;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+
+.form-body button:hover {
+    background: #FC8B9E;
+    cursor: pointer;
+}
+
+.form-body button:active {
+    background: #CC1433;
+}
+
+.form-body button p {
+    font-weight: bold;
+}
+
+/* Чекбокс */
+.check_box {
+    display: inline-block;
+    background: #FFFFFF;
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    border: solid #CCCCCC 2px;
+    cursor: pointer;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.check_box:hover::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 33%;
+    border: solid #F23051;
+    border-width: 0 0 2px 2px;
+    transform: translate(-50%, -60%) rotate(-45deg);
+    opacity: 0.4;
+}
+
+input:checked + .check_box {
+    border-color: #F23051;
+}
+
+input:checked + .check_box::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 33%;
+    border: solid #F23051;
+    border-width: 0 0 2px 2px;
+    transform: translate(-50%, -60%) rotate(-45deg);
+}
+
+.check {
+    display: none;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.check-label {
+    color: #404040;
+    line-height: 1;
+    user-select: none;
+}
+
+/* кнопка отправить */
+.submit_button {
+    display: flex;
+    flex-direction: row;
+}
+
+.submit_button img {
+    filter: invert(100%);
+}
